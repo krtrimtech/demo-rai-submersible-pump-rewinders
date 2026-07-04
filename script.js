@@ -7,7 +7,7 @@
 // ============================================
 // 1. THREE.JS - 3D INTERACTIVE BACKGROUND
 // ============================================
-(function initHeroScene() {"
+(function initHeroScene() {
   const canvas = document.getElementById('heroCanvas');
   if (!canvas) return;
 
@@ -72,9 +72,9 @@
 
     const coilGroup = new THREE.Group();
     const coils = [];
-    const colors = [0xfb923c, 0x06b6d4, 0xb45309];
+    const customColors = [0xfb923c, 0x06b6d4, 0xb45309];
     for (let i = 0; i < 8; i++) {
-      const coil = createCoil(colors[i % colors.length]);
+      const coil = createCoil(customColors[i % customColors.length]);
       coil.position.set((Math.random() - 0.5) * 22, (Math.random() - 0.5) * 14, (Math.random() - 0.5) * 14 - 5);
       coilGroup.add(coil);
       coils.push({
